@@ -9,11 +9,11 @@ class GroupController extends Controller
 {
 
     public function getAll(){
-        return response()->json(Group::all());
+        return response()->json(Group::all(), 200);
     }
 
     public function getOne($id){
-        return response()->json(Group::find($id));
+        return response()->json(Group::find($id), 200);
     }
 
     public function create(Request $request){
@@ -29,4 +29,10 @@ class GroupController extends Controller
         return response()->json($group, 200);
     }
 
+    public function delete($id){
+        $group = Group::findOrFail($id);
+        $group->delete();
+
+        return response()->json($group, 200);
+    }
 }

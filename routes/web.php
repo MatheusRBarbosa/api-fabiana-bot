@@ -17,9 +17,19 @@ $router->get('/', function () use ($router) {
 
 
 $router->group(['prefix' => 'groups'], function () use ($router){
+    //Groups routes
     $router->get('', ['uses' => 'GroupController@getAll']);
     $router->get('{id}', ['uses' => 'GroupController@getOne']);
     $router->post('', ['uses' => 'GroupController@create']);
     $router->put('{id}', ['uses' => 'GroupController@update']);
+    $router->delete('{id}', ['uses' => 'GroupController@delete']);
+
+    // Groups/sessions routes
+    $router->group(['prefix' => 'sessions'], function () use ($router){
+        //$router->get('', ['uses' => 'SessionController@getAll']);
+        $router->get('{id}', ['uses' => 'SessionController@getOne']);
+        //$router->post('', ['uses' => 'SessionController@create']);
+        //$router->put('{id}', ['uses' => 'SessionController@create']);
+    });
 });
 

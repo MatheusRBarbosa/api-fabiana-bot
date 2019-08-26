@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Group extends Model
+class Session extends Model
 {
 
     /**
@@ -13,7 +13,7 @@ class Group extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'gameMaster', 'players', 'roll20Link'
+        'data', 'groups_id'
     ];
 
     /**
@@ -22,8 +22,4 @@ class Group extends Model
      * @var array
      */
     protected $hidden = [];
-
-    public function sessions(){
-        return $this->hasMany('App\Session');
-    }
 }
