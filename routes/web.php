@@ -27,8 +27,8 @@ $router->group(['prefix' => 'groups'], function () use ($router){
     // Groups/sessions routes
 
     //$router->get('', ['uses' => 'SessionController@getAll']);
-    $router->get('{id}/sessions', ['uses' => 'SessionController@getOne']);
-    $router->post('{id}', ['uses' => 'SessionController@create']);
+    //$router->get('{id}/sessions/{session_id}', ['uses' => 'SessionController@getOne']);
+    $router->post('{id}/sessions', ['uses' => 'SessionController@create']);
     //$router->put('{id}', ['uses' => 'SessionController@create']);
    
 });

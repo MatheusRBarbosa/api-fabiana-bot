@@ -9,11 +9,12 @@ use Illuminate\Http\Request;
 class SessionController extends Controller
 {
 
+    /*
     public function getOne($id){
         $session = Group::find($id)->sessions();
         return response()->json($session, 200);
     }
-    /*
+    
     public function getAll(){
         return response()->json(Session::all(), 200);
     }
@@ -21,8 +22,9 @@ class SessionController extends Controller
 
     public function create($id, Request $request){
         $group = Group::find($id);
-        $session = $group->sessions()->save($request->all());
-
+        //$session = $group->sessions()->save($request->all());
+        $session = $group->sessions();
+        
         return response()->json($session, 201);
     }
     /*

@@ -24,6 +24,6 @@ class Group extends Model
     protected $hidden = [];
 
     public function sessions(){
-        return $this->hasMany(Session::class);
+        return $this->hasMany('App\Session');
     }
 }
