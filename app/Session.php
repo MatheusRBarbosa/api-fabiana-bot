@@ -21,5 +21,9 @@ class Session extends Model
      *
      * @var array
      */
+
+    public function groups(){
+        return $this->belongsTo(Group::class);
+    }
     protected $hidden = [];
 }

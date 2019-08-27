@@ -14,11 +14,15 @@ class CreateSessionsTable extends Migration
     public function up()
     {
         Schema::create('sessions', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id', true);
             $table->dateTime('data');
-            $table->integer('groups_id')->unsigned();
             $table->timestamps();
+            $table->bigInteger('group_id')->unsigned()->index();
         });
+        Schema::table('sessions', function($table) {
+            $table->foreign('group_id')->references('id')->on('groups');
+        });
+     
     }
 
     /**

@@ -25,11 +25,11 @@ $router->group(['prefix' => 'groups'], function () use ($router){
     $router->delete('{id}', ['uses' => 'GroupController@delete']);
 
     // Groups/sessions routes
-    $router->group(['prefix' => 'sessions'], function () use ($router){
-        //$router->get('', ['uses' => 'SessionController@getAll']);
-        $router->get('{id}', ['uses' => 'SessionController@getOne']);
-        //$router->post('', ['uses' => 'SessionController@create']);
-        //$router->put('{id}', ['uses' => 'SessionController@create']);
-    });
+
+    //$router->get('', ['uses' => 'SessionController@getAll']);
+    $router->get('{id}/sessions', ['uses' => 'SessionController@getOne']);
+    $router->post('{id}', ['uses' => 'SessionController@create']);
+    //$router->put('{id}', ['uses' => 'SessionController@create']);
+   
 });
 

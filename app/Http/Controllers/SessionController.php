@@ -17,14 +17,15 @@ class SessionController extends Controller
     public function getAll(){
         return response()->json(Session::all(), 200);
     }
+    */
 
-
-    public function create(Request $request){
-        $session = Session::create($request->all());
+    public function create($id, Request $request){
+        $group = Group::find($id);
+        $session = $group->sessions()->save($request->all());
 
         return response()->json($session, 201);
     }
-
+    /*
     public function update($id, Request $request){
         $session = Session::findOrFail($id);
         $session->update($request->all());
