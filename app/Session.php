@@ -13,7 +13,7 @@ class Session extends Model
      * @var array
      */
     protected $fillable = [
-        'data'
+        'date'
     ];
 
     /**
@@ -23,7 +23,7 @@ class Session extends Model
      */
 
     public function groups(){
-        return $this->belongsTo('App\Group');
+        return $this->belongsTo(Group::class);
     }
     protected $hidden = [];
 }

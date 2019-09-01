@@ -329,10 +329,8 @@
 	<div class="exception-summary">
 		<div class="container">
 			<div class="exception-message-wrapper">
-				<h1 class="break-long-words exception-message">Argument 1 passed to
-					Illuminate\Database\Eloquent\Relations\HasOneOrMany::save() must be an instance of
-					Illuminate\Database\Eloquent\Model, array given, called in
-					D:\Projetos\api-fabiana-bot\app\Http\Controllers\SessionController.php on line 25</h1>
+				<h1 class="break-long-words exception-message">Call to undefined function
+					App\Http\Controllers\findOrFail()</h1>
 				<div class="exception-illustration hidden-xs-down"><svg viewBox="0 0 136 81"
 						xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
 						stroke-linejoin="round" stroke-miterlimit="1.4">
@@ -351,33 +349,26 @@
 						<th>
 							<h3 class="trace-class">
 								<span class="text-muted">(1/1)</span>
-								<span class="exception_title"><abbr title="TypeError">TypeError</abbr></span>
+								<span class="exception_title"><abbr title="Error">Error</abbr></span>
 							</h3>
-							<p class="break-long-words trace-message">Argument 1 passed to
-								Illuminate\Database\Eloquent\Relations\HasOneOrMany::save() must be an instance of
-								Illuminate\Database\Eloquent\Model, array given, called in
-								D:\Projetos\api-fabiana-bot\app\Http\Controllers\SessionController.php on line 25</p>
+							<p class="break-long-words trace-message">Call to undefined function
+								App\Http\Controllers\findOrFail()</p>
 						</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td><span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\illuminate\database\Eloquent\Relations\HasOneOrMany.php line 248"><strong>HasOneOrMany.php</strong> line 248</span></span>
+						<td><span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\app\Http\Controllers\SessionController.php line 38"><strong>SessionController.php</strong> line 38</span></span>
 						</td>
 					</tr>
 					<tr>
 						<td>at
-							<span class="trace-class"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></span><span class="trace-type">-></span><span class="trace-method">save</span>(<span class="trace-arguments"><em>array</em>('date' => '2000-01-01')</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\app\Http\Controllers\SessionController.php line 25"><strong>SessionController.php</strong> line 25</span></span>
+							<span class="trace-class"><abbr title="App\Http\Controllers\SessionController">SessionController</abbr></span><span class="trace-type">-></span><span class="trace-method">delete</span>(<span class="trace-arguments">'1', '3'</span>)
 						</td>
 					</tr>
 					<tr>
 						<td>at
-							<span class="trace-class"><abbr title="App\Http\Controllers\SessionController">SessionController</abbr></span><span class="trace-type">-></span><span class="trace-method">create</span>(<span class="trace-arguments">'1', <em>object</em>(<abbr title="Laravel\Lumen\Http\Request">Request</abbr>)</span>)
-						</td>
-					</tr>
-					<tr>
-						<td>at
-							<span class="trace-class"><abbr title=""></abbr></span><span class="trace-type"></span><span class="trace-method">call_user_func_array</span>(<span class="trace-arguments"><em>array</em>(<em>object</em>(<abbr title="App\Http\Controllers\SessionController">SessionController</abbr>), 'create'), <em>array</em>('1', <em>object</em>(<abbr title="Laravel\Lumen\Http\Request">Request</abbr>))</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\illuminate\container\BoundMethod.php line 32"><strong>BoundMethod.php</strong> line 32</span></span>
+							<span class="trace-class"><abbr title=""></abbr></span><span class="trace-type"></span><span class="trace-method">call_user_func_array</span>(<span class="trace-arguments"><em>array</em>(<em>object</em>(<abbr title="App\Http\Controllers\SessionController">SessionController</abbr>), 'delete'), <em>array</em>('1', '3')</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\illuminate\container\BoundMethod.php line 32"><strong>BoundMethod.php</strong> line 32</span></span>
 						</td>
 					</tr>
 					<tr>
@@ -387,47 +378,47 @@
 					</tr>
 					<tr>
 						<td>at
-							<span class="trace-class"><abbr title="Illuminate\Container\BoundMethod">BoundMethod</abbr></span><span class="trace-type">::</span><span class="trace-method">callBoundMethod</span>(<span class="trace-arguments"><em>object</em>(<abbr title="Laravel\Lumen\Application">Application</abbr>), <em>array</em>(<em>object</em>(<abbr title="App\Http\Controllers\SessionController">SessionController</abbr>), 'create'), <em>object</em>(<abbr title="Closure">Closure</abbr>)</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\illuminate\container\BoundMethod.php line 34"><strong>BoundMethod.php</strong> line 34</span></span>
+							<span class="trace-class"><abbr title="Illuminate\Container\BoundMethod">BoundMethod</abbr></span><span class="trace-type">::</span><span class="trace-method">callBoundMethod</span>(<span class="trace-arguments"><em>object</em>(<abbr title="Laravel\Lumen\Application">Application</abbr>), <em>array</em>(<em>object</em>(<abbr title="App\Http\Controllers\SessionController">SessionController</abbr>), 'delete'), <em>object</em>(<abbr title="Closure">Closure</abbr>)</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\illuminate\container\BoundMethod.php line 34"><strong>BoundMethod.php</strong> line 34</span></span>
 						</td>
 					</tr>
 					<tr>
 						<td>at
-							<span class="trace-class"><abbr title="Illuminate\Container\BoundMethod">BoundMethod</abbr></span><span class="trace-type">::</span><span class="trace-method">call</span>(<span class="trace-arguments"><em>object</em>(<abbr title="Laravel\Lumen\Application">Application</abbr>), <em>array</em>(<em>object</em>(<abbr title="App\Http\Controllers\SessionController">SessionController</abbr>), 'create'), <em>array</em>('id' => '1'), <em>null</em></span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\illuminate\container\Container.php line 576"><strong>Container.php</strong> line 576</span></span>
+							<span class="trace-class"><abbr title="Illuminate\Container\BoundMethod">BoundMethod</abbr></span><span class="trace-type">::</span><span class="trace-method">call</span>(<span class="trace-arguments"><em>object</em>(<abbr title="Laravel\Lumen\Application">Application</abbr>), <em>array</em>(<em>object</em>(<abbr title="App\Http\Controllers\SessionController">SessionController</abbr>), 'delete'), <em>array</em>('id' => '1', 'session_id' => '3'), <em>null</em></span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\illuminate\container\Container.php line 576"><strong>Container.php</strong> line 576</span></span>
 						</td>
 					</tr>
 					<tr>
 						<td>at
-							<span class="trace-class"><abbr title="Illuminate\Container\Container">Container</abbr></span><span class="trace-type">-></span><span class="trace-method">call</span>(<span class="trace-arguments"><em>array</em>(<em>object</em>(<abbr title="App\Http\Controllers\SessionController">SessionController</abbr>), 'create'), <em>array</em>('id' => '1')</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php line 376"><strong>RoutesRequests.php</strong> line 376</span></span>
+							<span class="trace-class"><abbr title="Illuminate\Container\Container">Container</abbr></span><span class="trace-type">-></span><span class="trace-method">call</span>(<span class="trace-arguments"><em>array</em>(<em>object</em>(<abbr title="App\Http\Controllers\SessionController">SessionController</abbr>), 'delete'), <em>array</em>('id' => '1', 'session_id' => '3')</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php line 376"><strong>RoutesRequests.php</strong> line 376</span></span>
 						</td>
 					</tr>
 					<tr>
 						<td>at
-							<span class="trace-class"><abbr title="Laravel\Lumen\Application">Application</abbr></span><span class="trace-type">-></span><span class="trace-method">callControllerCallable</span>(<span class="trace-arguments"><em>array</em>(<em>object</em>(<abbr title="App\Http\Controllers\SessionController">SessionController</abbr>), 'create'), <em>array</em>('id' => '1')</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php line 342"><strong>RoutesRequests.php</strong> line 342</span></span>
+							<span class="trace-class"><abbr title="Laravel\Lumen\Application">Application</abbr></span><span class="trace-type">-></span><span class="trace-method">callControllerCallable</span>(<span class="trace-arguments"><em>array</em>(<em>object</em>(<abbr title="App\Http\Controllers\SessionController">SessionController</abbr>), 'delete'), <em>array</em>('id' => '1', 'session_id' => '3')</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php line 342"><strong>RoutesRequests.php</strong> line 342</span></span>
 						</td>
 					</tr>
 					<tr>
 						<td>at
-							<span class="trace-class"><abbr title="Laravel\Lumen\Application">Application</abbr></span><span class="trace-type">-></span><span class="trace-method">callLumenController</span>(<span class="trace-arguments"><em>object</em>(<abbr title="App\Http\Controllers\SessionController">SessionController</abbr>), 'create', <em>array</em>(1, <em>array</em>('uses' => 'App\\Http\\Controllers\\SessionController@create'), <em>array</em>('id' => '1'))</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php line 316"><strong>RoutesRequests.php</strong> line 316</span></span>
+							<span class="trace-class"><abbr title="Laravel\Lumen\Application">Application</abbr></span><span class="trace-type">-></span><span class="trace-method">callLumenController</span>(<span class="trace-arguments"><em>object</em>(<abbr title="App\Http\Controllers\SessionController">SessionController</abbr>), 'delete', <em>array</em>(1, <em>array</em>('uses' => 'App\\Http\\Controllers\\SessionController@delete'), <em>array</em>('id' => '1', 'session_id' => '3'))</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php line 316"><strong>RoutesRequests.php</strong> line 316</span></span>
 						</td>
 					</tr>
 					<tr>
 						<td>at
-							<span class="trace-class"><abbr title="Laravel\Lumen\Application">Application</abbr></span><span class="trace-type">-></span><span class="trace-method">callControllerAction</span>(<span class="trace-arguments"><em>array</em>(1, <em>array</em>('uses' => 'App\\Http\\Controllers\\SessionController@create'), <em>array</em>('id' => '1'))</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php line 278"><strong>RoutesRequests.php</strong> line 278</span></span>
+							<span class="trace-class"><abbr title="Laravel\Lumen\Application">Application</abbr></span><span class="trace-type">-></span><span class="trace-method">callControllerAction</span>(<span class="trace-arguments"><em>array</em>(1, <em>array</em>('uses' => 'App\\Http\\Controllers\\SessionController@delete'), <em>array</em>('id' => '1', 'session_id' => '3'))</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php line 278"><strong>RoutesRequests.php</strong> line 278</span></span>
 						</td>
 					</tr>
 					<tr>
 						<td>at
-							<span class="trace-class"><abbr title="Laravel\Lumen\Application">Application</abbr></span><span class="trace-type">-></span><span class="trace-method">callActionOnArrayBasedRoute</span>(<span class="trace-arguments"><em>array</em>(1, <em>array</em>('uses' => 'App\\Http\\Controllers\\SessionController@create'), <em>array</em>('id' => '1'))</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php line 263"><strong>RoutesRequests.php</strong> line 263</span></span>
+							<span class="trace-class"><abbr title="Laravel\Lumen\Application">Application</abbr></span><span class="trace-type">-></span><span class="trace-method">callActionOnArrayBasedRoute</span>(<span class="trace-arguments"><em>array</em>(1, <em>array</em>('uses' => 'App\\Http\\Controllers\\SessionController@delete'), <em>array</em>('id' => '1', 'session_id' => '3'))</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php line 263"><strong>RoutesRequests.php</strong> line 263</span></span>
 						</td>
 					</tr>
 					<tr>
 						<td>at
-							<span class="trace-class"><abbr title="Laravel\Lumen\Application">Application</abbr></span><span class="trace-type">-></span><span class="trace-method">handleFoundRoute</span>(<span class="trace-arguments"><em>array</em>(1, <em>array</em>('uses' => 'App\\Http\\Controllers\\SessionController@create'), <em>array</em>('id' => '1'))</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php line 233"><strong>RoutesRequests.php</strong> line 233</span></span>
+							<span class="trace-class"><abbr title="Laravel\Lumen\Application">Application</abbr></span><span class="trace-type">-></span><span class="trace-method">handleFoundRoute</span>(<span class="trace-arguments"><em>array</em>(1, <em>array</em>('uses' => 'App\\Http\\Controllers\\SessionController@delete'), <em>array</em>('id' => '1', 'session_id' => '3'))</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php line 233"><strong>RoutesRequests.php</strong> line 233</span></span>
 						</td>
 					</tr>
 					<tr>
 						<td>at
-							<span class="trace-class"><abbr title="Laravel\Lumen\Application">Application</abbr></span><span class="trace-type">-></span><span class="trace-method">handleDispatcherResponse</span>(<span class="trace-arguments"><em>array</em>(1, <em>array</em>('uses' => 'App\\Http\\Controllers\\SessionController@create'), <em>array</em>('id' => '1'))</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php line 169"><strong>RoutesRequests.php</strong> line 169</span></span>
+							<span class="trace-class"><abbr title="Laravel\Lumen\Application">Application</abbr></span><span class="trace-type">-></span><span class="trace-method">handleDispatcherResponse</span>(<span class="trace-arguments"><em>array</em>(1, <em>array</em>('uses' => 'App\\Http\\Controllers\\SessionController@delete'), <em>array</em>('id' => '1', 'session_id' => '3'))</span>)<span class="block trace-file-path">in <span title="D:\Projetos\api-fabiana-bot\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php line 169"><strong>RoutesRequests.php</strong> line 169</span></span>
 						</td>
 					</tr>
 					<tr>
