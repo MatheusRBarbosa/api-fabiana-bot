@@ -17,12 +17,19 @@ class GroupController extends Controller
     }
 
     public function create(Request $request){
+
+        $this->validate($request, [
+            'name' => 'required',
+            'gameMaster' => 'required'
+        ]);
+
         $group = Group::create($request->all());
 
         return response()->json($group, 201);
     }
 
     public function update($id, Request $request){
+
         $group = Group::findOrFail($id);
         $group->update($request->all());
 

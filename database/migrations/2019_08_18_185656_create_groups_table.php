@@ -17,8 +17,8 @@ class CreateGroupsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('gameMaster');
-            $table->string('players');
-            $table->string('roll20Link');
+            $table->string('players')->default('None yet!');
+            $table->string('roll20Link')->default('No link yet!');
             $table->timestamps();
         });
     }

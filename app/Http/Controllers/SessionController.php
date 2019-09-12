@@ -20,6 +20,10 @@ class SessionController extends Controller
     }
     
     public function create($id, Request $request){
+        $this->validate($request, [
+            'date' => 'required'
+        ]);
+
         $group = Group::find($id);
         $session = $group->sessions()->create($request->all());
         
